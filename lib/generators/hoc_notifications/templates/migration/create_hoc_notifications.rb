@@ -1,4 +1,4 @@
-class CreateHocNotifications < ActiveRecord::Migration
+class CreateHocNotifications < ActiveRecord::Migration[4.2]
   def change
     create_table :hoc_notifications do |t|
       t.integer :recipient_id
