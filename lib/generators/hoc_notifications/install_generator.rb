@@ -7,10 +7,6 @@ module HocNotifications
 
       source_root File.expand_path('../templates', __FILE__)
 
-      #def copy_initializer_file
-      #  template "initializer.rb", "config/initializers/hoc_notifications.rb"
-      #end
-
       def copy_migration_files
         migration_template "migration/create_hoc_notifications.rb", "db/migrate/create_hoc_notifications.rb"
       end

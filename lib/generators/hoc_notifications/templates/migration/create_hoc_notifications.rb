@@ -15,7 +15,7 @@ class CreateHocNotifications < ActiveRecord::Migration[4.2]
 
       t.string :action, null: false, default: ""
 
-      t.text :data, null: false, default: ""
+      t.json :data, null: false, default: {}
 
       t.datetime :seen_at
 

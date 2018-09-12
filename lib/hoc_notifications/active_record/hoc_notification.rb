@@ -6,7 +6,9 @@ module HocNotifications
 
     scope :unread, -> { where(seen_at: nil) }
 
-    serialize :data, Hash
+    before_save -> {
+      self.data = {} if self.data.nil?
+    }
 
     after_create -> {
       return if recipient.nil?
